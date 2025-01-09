@@ -56,12 +56,12 @@ def calculate_errors(data):
 # Function to plot data
 def plot_data(data, start, end, title):
     plt.figure(figsize=(10, 6))
-    plt.plot(data.index[start:end], data['Gyro_Yaw'][start:end], label='Gyro Yaw')
-    plt.plot(data.index[start:end], data['Rate_Yaw'][start:end], label='Rate Yaw (Command)')
-    plt.plot(data.index[start:end], data['Rate_Error'][start:end], label='Rate Error', linestyle='--')
-    #plt.plot(data.index[start:end], data['Orientation_Yaw'][start:end], label='Attitude_Yaw')
-    #plt.plot(data.index[start:end], data['Attitude_Yaw'][start:end], label='Attitude Yaw (Command)')
-    #plt.plot(data.index[start:end], data['Attitude_Error'][start:end], label='Attitude Error', linestyle='--')
+    #plt.plot(data.index[start:end], data['Gyro_Yaw'][start:end], label='Gyro Yaw')
+    #plt.plot(data.index[start:end], data['Rate_Yaw'][start:end], label='Rate Yaw (Command)')
+    #plt.plot(data.index[start:end], data['Rate_Error'][start:end], label='Rate Error', linestyle='--')
+    plt.plot(data.index[start:end], data['Orientation_Yaw'][start:end], label='Attitude_Yaw')
+    plt.plot(data.index[start:end], data['Attitude_Yaw'][start:end], label='Attitude Yaw (Command)')
+    plt.plot(data.index[start:end], data['Attitude_Error'][start:end], label='Attitude Error', linestyle='--')
 
     plt.title(title)
     plt.xlabel('Time (Index)')
