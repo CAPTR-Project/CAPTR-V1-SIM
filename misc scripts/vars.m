@@ -24,7 +24,7 @@ com = 0.215; % m
 
 armTVC = [
     0
-    -0.001
+    -0.0008
     0.1064]; 
 
 % I_xx = (1/12) * m * (3*(r_o^2- r_i^2) + h^2) + m * com^2;% inertia as measured by pitch and roll
@@ -44,3 +44,5 @@ sample_time = 1/416;
 alpha_rate = 1;
 alpha_att = 1;
 max_angle = 8*pi/180;
+
+load("model1_hammersteinWiener.mat");
