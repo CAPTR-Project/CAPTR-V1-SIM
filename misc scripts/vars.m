@@ -24,7 +24,7 @@ com = 0.215; % m
 
 armTVC = [
     0
-    -0.0008
+    0 
     0.1064]; 
 
 % I_xx = (1/12) * m * (3*(r_o^2- r_i^2) + h^2) + m * com^2;% inertia as measured by pitch and roll
