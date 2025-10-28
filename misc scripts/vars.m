@@ -1,5 +1,12 @@
 % environment
 g = 9.807;
+sample_time = 1/2000;
+
+att_control_rate = 1/100;
+rate_control_rate = 1/400;
+servo_rate = 1/100; % 100 hz servo
+
+
 % Contact model
 contact.translation.spring = 3100;
 contact.translation.damper = 100;
@@ -21,6 +28,7 @@ r_o = 0.0399; % m
 r_i = 0.0381;
 h = 0.4; % m
 com = 0.215; % m
+initial_euler = [0, 0.2, 0];
 
 armTVC = [
     0
@@ -40,9 +48,9 @@ inertia = [I_xx, 0,    0;
 % rocket aerodynamics
 c_d = 0.2;
 
-sample_time = 1/416;
+% tvc characterization
 alpha_rate = 1;
 alpha_att = 1;
 max_angle = 8*pi/180;
 
-load("model1_hammersteinWiener.mat");
+nlhw = load("nlhw.mat").nlhw13;
