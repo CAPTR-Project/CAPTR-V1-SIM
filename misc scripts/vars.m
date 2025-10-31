@@ -28,7 +28,7 @@ r_o = 0.0399; % m
 r_i = 0.0381;
 h = 0.4; % m
 com = 0.215; % m
-initial_euler = [0, 0.2, 0];
+initial_euler = [0, 0, 0];
 
 armTVC = [
     0
@@ -53,4 +53,7 @@ alpha_rate = 1;
 alpha_att = 1;
 max_angle = 8*pi/180;
 
-nlhw = load("nlhw.mat").nlhw13;
+% nlhw = load("sysid/nlhw.mat").nlhw13;
+% ss_tvc = load("sysid/ss_tvc.mat").ss1;
+
+tf_tvc = load("sysid/tf_tvc.mat").tf2;
