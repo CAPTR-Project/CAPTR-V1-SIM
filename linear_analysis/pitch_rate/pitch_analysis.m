@@ -5,7 +5,6 @@ format long g
 
 sys = load("linear_analysis/pitch_rate/linsys_pitchrate.mat").linsys1;
 
-sys = linsys1;
 Ts = sys.Ts;
 
 % convert to continuous system
