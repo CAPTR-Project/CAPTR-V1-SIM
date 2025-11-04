@@ -15,5 +15,11 @@ sys_c = d2c(sys, 'tustin');
 G = minreal(tf(num, den))
 
 %% controller design
-controls_designer_session = load("linear_analysis/pitch_rate/ControlSystemDesignerSession.mat").ControlSystemDesignerSession;
+controls_designer_session = load("linear_analysis/pitch_rate/ControlSystemDesignerSessionITuned2.mat").ControlSystemDesignerSession;
 controlSystemDesigner(controls_designer_session);
+
+%% compensator
+num = [0.0032072, 0.0353636, 0.01688];
+den = [0.00048, 1, 0];
+C = tf(num, den);
+

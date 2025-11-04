@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Info File="main.slx" GroupUUID="" Icon="" Name="rocket_model" Type="StartUp" Visible="0">
+<Info File="linear_analysis/linear_plants.m" GroupUUID="" Icon="" Name="linear_plants" Type="StartUp" Visible="0">
     <Extension Name="StartUpPrev" Value="83c47788-252b-4369-b7f4-834d68fce81d"/>
 </Info>
