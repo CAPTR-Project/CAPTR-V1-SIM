@@ -28,13 +28,18 @@ r_o = 0.0399; % m
 r_i = 0.0381;
 h = 0.4; % m
 com = 0.215; % m
-initial_euler = [0, 0.2, 0];
+initial_euler = [0, 0, 0];
 att_setpoint_euler = [0, 0, 0];
+
+TVC_angle_offset = [
+    0,  % yaw
+    0;] % pitch
 
 armTVC = [
     0
-    0 
-    0.1064]; 
+    0
+    0.1064];
+
 
 % I_xx = (1/12) * m * (3*(r_o^2- r_i^2) + h^2) + m * com^2;% inertia as measured by pitch and roll
 I_xx = 0.00628;
