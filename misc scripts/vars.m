@@ -32,12 +32,12 @@ initial_euler = [0, 0, 0];
 att_setpoint_euler = [0, 0, 0];
 
 TVC_angle_offset = [
-    0,  % yaw
-    0;] % pitch
+    0.0;  % yaw
+    0.0]; % pitch
 
 armTVC = [
-    0
-    0
+    0.0
+    0.0
     0.1064];
 
 
