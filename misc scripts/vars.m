@@ -28,12 +28,12 @@ r_o = 0.0399; % m
 r_i = 0.0381;
 h = 0.4; % m
 com = 0.215; % m
-initial_euler = [0, 0, 0];
+initial_euler = [0, 0*12*pi/180, 0];
 att_setpoint_euler = [0, 0, 0];
 
 TVC_angle_offset = [
     0.0;  % yaw
-    0.0]; % pitch
+    0*-0.7*pi/180]; % pitch
 
 armTVC = [
     0.0
@@ -63,3 +63,16 @@ max_angle = 8*pi/180;
 % ss_tvc = load("sysid/ss_tvc.mat").ss1;
 
 tf_tvc = load("sysid/tf_tvc.mat").tf2;
+
+
+%% mount estimate
+r1 = 81.3e-3;
+
+r2 = 140e-3;
+
+I = 0.5 * 0.140 * (r1^2 + r2^2)
+
+% % lin sys temp
+% G_temp = linsys7(2)
+% [num, den] = ss2tf(G_temp.A, G_temp.B, G_temp.C, G_temp.D)
+% G = minreal(tf(num,den));
