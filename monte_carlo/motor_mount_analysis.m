@@ -1,4 +1,4 @@
-N_trials = 1000;
+N_trials = 100;
 results = zeros(N_trials, 1);
 
 end_pitch_rate = [];

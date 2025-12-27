@@ -28,12 +28,12 @@ r_o = 0.0399; % m
 r_i = 0.0381;
 h = 0.4; % m
 com = 0.215; % m
-initial_euler = [0, 0*12*pi/180, 0];
+initial_euler = [0, 12*pi/180, 0];
 att_setpoint_euler = [0, 0, 0];
 
 TVC_angle_offset = [
     0.0;  % yaw
-    0*-0.7*pi/180]; % pitch
+    3*pi/180]; % pitch
 
 armTVC = [
     0.0
